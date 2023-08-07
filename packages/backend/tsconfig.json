@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "allowJs": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "paths": {
+      "@env": ["src/env"],
+      "@core/*": ["src/core/*"],
+      "@models/*": ["src/models/*"],
+      "@entities/*": ["src/entities/*"],
+      "@modules/*": ["src/modules/*"],
+      "@utils/*": ["src/utils/*"],
+      "@settings/*": ["src/settings/*"],
+      "@scripts/*": ["src/scripts/*"]
+    },
+    "typeRoots": ["node_modules/@types", "../../node_modules/@types"]
+  },
+  "include": ["src/**/*", "test/**/*"]
+}
