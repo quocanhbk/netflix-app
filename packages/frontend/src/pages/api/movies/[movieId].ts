@@ -11,14 +11,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     await serverAuth(req, res);
 
-    const movieCount = await prismadb.movie.count();
-    const randomIndex = Math.floor(Math.random() * movieCount);
+    const { movieId } = req.query;
 
-    const randomMovies = await prismadb.movie.findMany({ take: 1, skip: randomIndex });
+    if (!movieId || typeof movieId !== 'string') {
+      throw new Error('Invalid ID');
+    }
 
-    return res.status(200).json(randomMovies[0]);
-  } catch (error) {
-    console.log(error);
+    const movie = await prismadb.movie.findUnique({
+      where: {
+        id: movieId,
+      },
+    });
+
+    if (!movie) {
+      throw new Error('Invalid ID');
+    }
+
+    return res.status(200).json(movie);
+  } catch (err) {
+    console.log(err);
     return res.status(400).end();
   }
 }
