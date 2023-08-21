@@ -11,10 +11,10 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@api/*": ["src/pages/api/*"],
-      "@components/*": ["src/components/*"],
-      "@providers/*": ["src/providers/*"],
-      "@hooks": ["src/hooks"]
+      "@api/*": ["./src/pages/api/*"],
+      "@components/*": ["./src/components/*"],
+      "@providers/*": ["./src/providers/*"],
+      "@hooks": ["./src/hooks"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
