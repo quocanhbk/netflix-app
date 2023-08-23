@@ -4,7 +4,7 @@ import { FcGoogle } from 'react-icons/fc';
 import axios from 'axios';
 import { signIn } from 'next-auth/react';
 
-import Input from '@components/Input';
+import Input from 'src/components/Input';
 
 export default function Auth() {
   const [email, setEmail] = useState('');

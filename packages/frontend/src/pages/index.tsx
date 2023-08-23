@@ -1,10 +1,10 @@
 import type { NextPage, NextPageContext } from 'next';
 import { getSession } from 'next-auth/react';
 
-import Billboard from '@components/Billboard';
-import InfoModal from '@components/InfoModal';
-import MovieList from '@components/MovieList';
-import Navbar from '@components/Navbar';
+import Billboard from 'src/components/Billboard';
+import InfoModal from 'src/components/InfoModal';
+import MovieList from 'src/components/MovieList';
+import Navbar from 'src/components/Navbar';
 import useFavorites from 'src/hooks/useFavorites';
 import useInfoModal from 'src/hooks/useInfoModal';
 import useMovieList from 'src/hooks/useMovieList';
