@@ -58,7 +58,7 @@ export default function Auth() {
             <div className="flex flex-col gap-4">
               {variant === 'register' && (
                 <input
-                  label="Username"
+{/*                   label="Username" */}
                   onChange={(event: any) => setName(event.target.value)}
                   id="username"
                   type="name"
@@ -66,14 +66,14 @@ export default function Auth() {
                 />
               )}
               <input
-                label="Email"
+{/*                 label="Email" */}
                 onChange={(event: any) => setEmail(event.target.value)}
                 id="email"
                 type="email"
                 value={email}
               />
               <input
-                label="Password"
+{/*                 label="Password" */}
                 onChange={(event: any) => setPassword(event.target.value)}
                 id="password"
                 type="password"
